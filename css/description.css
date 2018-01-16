@@ -1,0 +1,16 @@
+body {
+
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+.description_container{
+	max-width: 650px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+}
+.nav ul li a{
+	font-size: 20px;
+}
