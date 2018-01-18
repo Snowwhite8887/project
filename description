@@ -4,85 +4,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" hronload="pageload()"ef="css/bootstrap-responsive.min.css">
   <link rel="stylesheet" href="css/description.css">
   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="icon/favicon.ico">
   <title>description</title>
 </head> 
 
-<body>
-
-  <script type="text/javascript" src="js/description.js"></script>
+<body background="img/1.jpg" onload="pageloaddescription()">
+  <script type="text/javascript" src="login.js"></script>
+  <script src="js/register.js"></script>
+  <script type="text/javascript" src="description.js"></script>
 
   <div class="description_container">
     <div class="nav" role="navigation">
       <ul class="nav nav-tabs">
-        <li class="active">
-          <a href="#information" data-toggle="tab">Information</a></li>
-          <li><a href="#statistics" data-toggle="tab">Statistics</a></li>
-          <li><a href="#">Messages</a></li>
-        </ul>
-      </div>     
+        <li  class="active"><a href="#statistics" data-toggle="tab">Statistics</a></li>
+        <li>
+          <a href="#information" data-toggle="tab">Information</a>
+        </li>
 
-      <div id="myTabContent" class="tab-content">
+        <li><a href="#message" data-toggle="tab">Messages Search</a></li>
+      </ul>
+    </div>     
 
-        <div class="tab-pane fade in active" id="information">
-         <div class="table-responsive">
+    <div id="myTabContent" class="tab-content">
+
+      <div class="tab-pane fade  in active" id="statistics">
+        <div class="table-responsive">
           <fieldset>
-            <legend>Information Table</legend>
+            <legend>Statistics Table</legend>
           </fieldset>
           <table class="table table-hover">
            <thead>
             <tr>
-              <th>LDAP ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>PhoneNumber</th>
+              <th>Student-ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
               <th>Grade</th>
             </tr>
           </thead>
           <tbody>
             <tr class="info">
-              <td>130824221</td>
-              <td>pengxue</td>
-              <td>pengxue@sensetime.com</td>
-              <td>18810682621</td>
-              <td>A</td>
+              <td>001</td>
+              <td>Rammohan </td>
+              <td>Reddy</td>
+              <td>A+</td>
             </tr>
             <tr class="success">
               <td>002</td>
               <td>Smita</td>
               <td>Pallod</td>
               <td>A</td>
-              <td>A</td>
             </tr>
             <tr class="warning">
               <td>003</td>
               <td>Rabindranath</td>
               <td>Sen</td>
-              <td>A+</td>
               <td>A+</td>
             </tr>
             <tr class="info">
-              <td>130824221</td>
-              <td>pengxue</td>
-              <td>pengxue@sensetime.com</td>
-              <td>18810682621</td>
-              <td>A</td>
+              <td>001</td>
+              <td>Rammohan </td>
+              <td>Reddy</td>
+              <td>A+</td>
             </tr>
             <tr class="success">
               <td>002</td>
               <td>Smita</td>
               <td>Pallod</td>
               <td>A</td>
-              <td>A</td>
             </tr>
             <tr class="warning">
               <td>003</td>
               <td>Rabindranath</td>
               <td>Sen</td>
-              <td>A+</td>
               <td>A+</td>
             </tr>
           </tbody>
@@ -90,70 +87,29 @@
       </div>
     </div>
 
-    <div class="tab-pane fade" id="statistics">
-      <div class="table-responsive">
+    <div class="tab-pane fade" id="information">
+     <div class="table-responsive">
       <fieldset>
-        <legend>Statistics Table</legend>
+        <legend>Information Table</legend>
       </fieldset>
-      <table class="table table-hover">
-       <thead>
-        <tr>
-          <th>Student-ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Grade</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="info">
-          <td>001</td>
-          <td>Rammohan </td>
-          <td>Reddy</td>
-          <td>A+</td>
-        </tr>
-        <tr class="success">
-          <td>002</td>
-          <td>Smita</td>
-          <td>Pallod</td>
-          <td>A</td>
-        </tr>
-        <tr class="warning">
-          <td>003</td>
-          <td>Rabindranath</td>
-          <td>Sen</td>
-          <td>A+</td>
-        </tr>
-        <tr class="info">
-          <td>001</td>
-          <td>Rammohan </td>
-          <td>Reddy</td>
-          <td>A+</td>
-        </tr>
-        <tr class="success">
-          <td>002</td>
-          <td>Smita</td>
-          <td>Pallod</td>
-          <td>A</td>
-        </tr>
-        <tr class="warning">
-          <td>003</td>
-          <td>Rabindranath</td>
-          <td>Sen</td>
-          <td>A+</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <div id="list"></div>
     </div>
+  </div>
 
-    <div class="tab-pane fade" id="jmeter">
-      <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
-    </div>
-    <div class="tab-pane fade" id="ejb">
-      <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
-      </p>
+  <div class="tab-pane fade" id="message">
+    <div class="table-responsive">
+      <fieldset>
+        <legend>Message Search</legend>
+      </fieldset>
+      <label for="search_phone">Input your LDAP ID: </label>  
+      <input type="text" id="search_site" name="search_site"/>  
+      <input type="button" onclick="find()" value="Search"/>
+      <p id="find_result"><br/></p> 
+      <br/>  
     </div>
   </div>
+
+</div>
 </div>
 </body>
 </html>

@@ -8,12 +8,14 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/login.css">
+	<link rel="icon" href="icon/favicon.ico">
 	<title>login</title>
 </head> 
 
-<body>
+<body background="img/1.jpg" onload="pageloadsignin()">
 	<script src="js/bootstrapValidator.min.js"></script>
 	<script type="text/javascript" src="js/login.js"></script>
+	<script src="js/register.js"></script>
 	<link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
 	<div id="login" class="login_container">
 		<form class="form_horizontal " role="form">
@@ -24,7 +26,7 @@
 			<input type="text" class="form-control" id="uid" placeholder="LDAP ID" required>
 			<input type="password" class="form-control" id="password" placeholder="password" required>
 			<label class="checkbox">
-				<input type="checkbox" value="remember-me" name="remember">Remember me
+				<input type="checkbox" value="remember-me" name="remember" id="check">Remember me
 			</label>
 			<div class="button-submit">
 				<button class="btn btn-primary" onclick="login()" id="btnLogin" >Sign in</button>
@@ -33,7 +35,20 @@
 		</form>
 	</div>
 
-
-	
+<!--
+	<div  class="add1">
+    <address>
+      <strong>	Address .</strong><br>
+      795 Folsom Ave, Suite 600<br>
+      San Francisco, CA 94107<br>
+      <abbr title="Phone">P:</abbr> 18810683629
+    </address>
+     
+    <address>
+      <strong>Peng Xue</strong><br>
+      <a href="mailto:#">pengxue@sensetime.com</a>
+    </address>
+	</div>
+	<-->
 </body>
 </html>
