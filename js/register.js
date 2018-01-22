@@ -20,8 +20,8 @@ function register(){
 
     if(inputID.value==""||inputName.value==""||inputEmail.value==""||inputPassword.value==""||inputPhone==""||inputJob.value=="")
 		alert("Input is empty");
-
-    window.open("description");
+    else
+        window.open("description.html");
 }
 
 
@@ -93,10 +93,10 @@ function login(){
                 var site = JSON.parse(str);  
 
                 if(uid==site.id&&password==site.password)
-                    window.open("description");
+                    window.open("description.html");
     }
 }
 
 function signup(){
-    window.open("register");
+    window.open("register.html");
 }
