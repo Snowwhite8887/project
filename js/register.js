@@ -75,26 +75,28 @@ function login(){
     
     var uid=$$("uid").value;
     var password=$$("password").value;
-    localStorage.setItem("uid",uid);
+    /*localStorage.setItem("uid",uid);
     if($$("check").checked){
         localStorage.setItem("password",password);
 
     }else{
         localStorage.removeItem("password");
-    }
+    }*/
 
 
     if(uid==""||password=="")
         alert("Input is empty");
-
-    for(var i=0;i<localStorage.length;i++){ 
+      for(var i=0;i<localStorage.length;i++){ 
                 var keyname = localStorage.key(i);  
                 var str = localStorage.getItem(keyname);  
                 var site = JSON.parse(str);  
 
                 if(uid==site.id&&password==site.password)
-                    window.open("description.html");
+                    //window.open("description.html");
+                    window.location.href="description.html";
     }
+
+  
 }
 
 function signup(){
